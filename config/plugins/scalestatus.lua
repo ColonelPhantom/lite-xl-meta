@@ -1,1 +1,1 @@
-/home/quinten/lite-xl/lite-xl-plugins/plugins/scalestatus.lua
+../../lite-xl-plugins/plugins/scalestatus.lua
