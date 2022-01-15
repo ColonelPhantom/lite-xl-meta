@@ -7,6 +7,8 @@ local keymap = require "core.keymap"
 local config = require "core.config"
 local style = require "core.style"
 
+VERSION = "2.0.4"
+
 ------------------------------ Themes ----------------------------------------
 
 -- light theme:
@@ -16,8 +18,11 @@ core.reload_module("colors.winter")
 
 -- key binding:
 -- keymap.add { ["ctrl+escape"] = "core:quit" }
-keymap.add { ["ctrl+,"] = "core:open-user-module" }
-
+keymap.add {
+    ["alt+,"]          = "core:open-user-module",
+    ["alt+shift+r"]     = "core:restart",
+    ["alt+slthift+l"]    = "core:open-log",
+}
 
 ------------------------------- Fonts ----------------------------------------
 
@@ -59,7 +64,10 @@ treeview.toolbar.visible = false
 
 config.plugins.trimwhitespace = true
 
-config.tab_type = "hard"
+require "plugins.scale"
+config.plugins.scale.mode = "ui"
+
+config.tab_type = "soft"
 config.indent_size = 4
 config.line_limit = 100
 config.message_timeout = 3
