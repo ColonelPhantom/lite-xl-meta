@@ -12,7 +12,7 @@ VERSION = "2.0.4"
 ------------------------------ Themes ----------------------------------------
 
 -- light theme:
-core.reload_module("colors.winter")
+core.reload_module("colors.breeze")
 
 --------------------------- Key bindings -------------------------------------
 
@@ -20,8 +20,8 @@ core.reload_module("colors.winter")
 -- keymap.add { ["ctrl+escape"] = "core:quit" }
 keymap.add {
     ["alt+,"]          = "core:open-user-module",
-    ["alt+shift+r"]     = "core:restart",
-    ["alt+slthift+l"]    = "core:open-log",
+    ["alt+shift+r"]    = "core:restart",
+    ["alt+shift+;"]    = "core:open-log",
 }
 
 ------------------------------- Fonts ----------------------------------------
