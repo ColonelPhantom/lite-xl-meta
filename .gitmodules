@@ -1,0 +1,12 @@
+[submodule "config/LICENSE"]
+	path = config/LICENSE
+	url = https://github.com/lite-xl/lite-xl-plugins
+[submodule "lite-xl"]
+	path = lite-xl
+	url = https://github.com/lite-xl/lite-xl
+[submodule "lite-xl-colors"]
+	path = lite-xl-colors
+	url = https://github.com/lite-xl/lite-xl-colors
+[submodule "lite-xl-plugins"]
+	path = lite-xl-plugins
+	url = https://github.com/lite-xl/lite-xl-plugins
