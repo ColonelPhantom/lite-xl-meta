@@ -18,6 +18,7 @@ config.message_timeout = 3
 config.line_height = 1.15
 config.animation_rate = 0.5
 config.fps = 60
+config.max_log_items = 800
 
 ------------------------------ Themes ----------------------------------------
 
