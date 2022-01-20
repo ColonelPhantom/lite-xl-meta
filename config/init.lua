@@ -7,11 +7,20 @@ local keymap = require "core.keymap"
 local config = require "core.config"
 local style = require "core.style"
 
+-- Workaround for running with data directory from repo directly
 VERSION = "2.0.4"
+
+
+config.tab_type = "soft"
+config.indent_size = 4
+config.line_limit = 100
+config.message_timeout = 3
+config.line_height = 1.15
+config.animation_rate = 0.5
+config.fps = 60
 
 ------------------------------ Themes ----------------------------------------
 
--- light theme:
 core.reload_module("colors.breeze")
 
 --------------------------- Key bindings -------------------------------------
@@ -39,6 +48,7 @@ style.code_font = renderer.font.load("/usr/share/fonts/TTF/CascadiaCode.ttf", 14
 -- style.icon_font     : icons
 -- style.icon_big_font : toolbar icons
 -- style.code_font     : code
+
 --
 -- the function to load the font accept a 3rd optional argument like:
 --
@@ -64,11 +74,22 @@ treeview.toolbar.visible = false
 
 config.plugins.trimwhitespace = true
 
-require "plugins.scale"
+local scale = require "plugins.scale"
 config.plugins.scale.mode = "ui"
+scale.set(1.0)
 
-config.tab_type = "soft"
-config.indent_size = 4
-config.line_limit = 100
-config.message_timeout = 3
+require "plugins.minimap"
+config.plugins.minimap.width = 80
 
+local lsp = require "plugins.lsp"
+config.plugins.lsp.log_file = "/home/quinten/lite-xl/lsp.log"
+
+local lspconfig = require "plugins.lsp.config"
+lspconfig.clangd.setup {}
+lspconfig.sumneko_lua.setup {
+    command = {"lua-language-server"}
+}
+lspconfig.rust_analyzer.setup {}
+lspconfig.hls.setup {}
+lspconfig.pylsp.setup {}
+lspconfig.zls.setup {}
