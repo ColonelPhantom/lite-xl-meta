@@ -7,3 +7,21 @@
 [submodule "lite-xl-plugins"]
 	path = lite-xl-plugins
 	url = https://github.com/lite-xl/lite-xl-plugins
+[submodule "lintplus"]
+	path = lintplus
+	url = https://github.com/liquidev/lintplus
+[submodule "lite-xl-lsp"]
+	path = lite-xl-lsp
+	url = https://github.com/ColonelPhantom/lite-xl-lsp
+[submodule "config/widget"]
+	path = config/widget
+	url = https://github.com/jgmdev/lite-xl-widgets
+[submodule "console"]
+	path = console
+	url = https://github.com/lite-xl/console
+[submodule "lite-xl-tmt"]
+	path = lite-xl-tmt
+	url = https://github.com/ColonelPhantom/lite-xl-tmt
+[submodule "lite-xl-terminal"]
+	path = lite-xl-terminal
+	url = https://github.com/benjcollins/lite-xl-terminal/
